@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #FFFFFF, #8FBC8F, #4682B4);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #2E8B57;
+    color: white;
+    text-align: center;
+    padding: 20px; /* Уменьшаем padding для телефонов */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em; /* Уменьшаем размер заголовка для телефонов */
+}
+
+.container {
+    padding: 10px; /* Уменьшаем padding для телефонов */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.text-block,
+.image-block {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px; /* Уменьшаем padding для телефонов */
+    margin-bottom: 15px; /* Уменьшаем margin для телефонов */
+    width: 95%; /* Увеличиваем ширину для лучшего использования пространства */
+    max-width: none; /* Отменяем max-width для телефонов */
+    box-sizing: border-box;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.text-block:hover,
+.image-block:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.text-block p {
+    text-align: left;
+    padding: 5px; /* Уменьшаем padding для телефонов */
+    font-size: 1em; /* Устанавливаем базовый размер шрифта для параграфов */
+}
+
+.image-block {
+    display: flex;
+    background-color: #333;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-block img {
+    max-width: 100%;
+    max-height: 400px; /* Уменьшаем максимальную высоту изображений для телефонов */
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+
+.footer {
+    background-color: #228B22;
+    color: white;
+    text-align: center;
+    padding: 15px; /* Уменьшаем padding для телефонов */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 0.9em; /* Уменьшаем размер шрифта для телефонов */
+}
+
+.left {
+    align-self: flex-start;
+    background-color: #22558b;
+}
+
+.right {
+    align-self: flex-end;
+}
+
+.center {
+    align-self: center;
+    background-color: #4208af9a;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #faff5b;
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+a:visited {
+    color: #ff4ad8;
+}
+
+/* Медиа-запрос для небольших экранов (телефоны) */
+@media (max-width: 767px) {
+    .header h1 {
+        font-size: 1.75em;
+    }
+    .text-block p {
+        font-size: 0.9em; /* Уменьшаем размер шрифта параграфов для небольших экранов */
+    }
+}
+
+
+@media (min-width: 768px) {
+    .text-block,
+    .image-block {
+        width: 90%;
+        max-width: 600px; /* Возвращаем max-width для больших экранов */
+    }
+    .header h1 {
+        font-size: 2.5em; /* Восстанавливаем размер заголовка для планшетов и ПК */
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .text-block,
+    .image-block {
+        width: 90%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .text-block,
+    .image-block {
+        width: 70%;
+    }
+
+  .text-block p a {
+    font-size: 1.2em;
+  }
+}
